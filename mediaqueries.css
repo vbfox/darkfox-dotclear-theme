@@ -1,11 +1,11 @@
-@media only screen and (max-width:700px) {
+@media only screen and (max-width:800px) {
 	.post-content, .post-excerpt {
 		margin: 0;
 		padding: 4px 10px 0 10px;
 	}
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:700px) {
 	#top h1 {
 		font-size: 25px;
 		
