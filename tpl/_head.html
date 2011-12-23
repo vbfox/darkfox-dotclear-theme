@@ -1,20 +1,12 @@
 <meta name="viewport" content="initial-scale=1.0;minimum-scale=1.0;">
 
-<style type="text/css" media="screen">
-@import url({{tpl:BlogThemeURL}}/style.css);
-</style>
-<style type="text/css">
-@import url({{tpl:BlogThemeURL}}/mediaqueries.css);
-</style>
 <style type="text/css" media="print">
 @import url({{tpl:BlogThemeURL}}/../default/print.css);
 </style>
 
-<script type="text/javascript" src="{{tpl:BlogThemeURL}}/js/modernizr-2.0.6.js"></script>
-<script type="text/javascript" src="{{tpl:BlogThemeURL}}/js/android-modernizr.js"></script>
-<script type="text/javascript" src="{{tpl:BlogThemeURL}}/js/webkit-modernizr.js"></script>
-<script type="text/javascript" src="{{tpl:BlogThemeURL}}/../default/js/jquery.js"></script>
-<script type="text/javascript" src="{{tpl:BlogThemeURL}}/../default/js/jquery.cookie.js"></script>
+{{tpl:include src="_head_css.html"}}
+
+{{tpl:include src="_head_script.html"}}
 
 {{tpl:include src="user_head.html"}}
 {{tpl:SysBehavior behavior="publicHeadContent"}}
