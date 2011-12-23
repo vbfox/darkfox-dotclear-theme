@@ -1,0 +1,39 @@
+@media only screen and (max-width:700px) {
+	.post-content, .post-excerpt {
+		margin: 0;
+		padding: 4px 10px 0 10px;
+	}
+}
+
+@media only screen and (max-width:500px) {
+	#top h1 {
+		font-size: 25px;
+		
+		-webkit-transform: translateX(35px) translateY(-5px) rotate(-90deg);
+		-moz-transform: translateX(35px) translateY(-5px) rotate(-90deg);   
+		-o-transform: translateX(35px) translateY(-5px) rotate(-90deg);
+		-ms-transform: translateX(35px) translateY(-5px) rotate(-90deg);
+		transform: translateX(35px) translateY(-5px) rotate(-90deg);
+	}
+	
+	#page
+	{
+		margin: 5px 5px 5px 40px;
+	}
+}
+
+@media only screen and (max-width:350px) {
+	#top h1 {
+		position: relative;
+		-webkit-transform: none;
+		-moz-transform: none;   
+		-o-transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
+	
+	#page
+	{
+		margin: 5px;
+	}
+}
