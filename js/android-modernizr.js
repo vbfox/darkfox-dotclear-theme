@@ -8,6 +8,8 @@
  *  - android-ge-2
  */
 (function( window, document, undefined ) {
+	"use strict";
+	
 	var re = /android (\d+)[.;]/i;
 	var match = re.exec(navigator.userAgent);
 	if (!match) return;
