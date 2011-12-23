@@ -40,8 +40,11 @@
 		margin: 5px 0 15px 0;
 	}
 	
-	#page
-	{
+	#page {
 		margin: 5px;
+	}
+	
+	.post-datetime {
+		float: none;
 	}
 }

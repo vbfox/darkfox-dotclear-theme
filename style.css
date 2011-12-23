@@ -128,7 +128,7 @@ code {
 	transform-origin: 0% 100%;
 }
 
-#top a:link, #top a:visited, #top a:hover {
+#top h1, #top a:link, #top a:visited, #top a:hover {
 	color: #8C96A2;
 	text-decoration: none;
 }
@@ -372,9 +372,11 @@ a.feed { }
 }
 
 .post-datetime {
-	padding: 10px 0 0 0;
+	color: #8C96A2;
+	padding: 5px 0 0 0;
 	float: right;
 	font-style: italic;
+	font-size: 1.2em;
 }
 
 .post-tags {
