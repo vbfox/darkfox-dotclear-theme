@@ -21,7 +21,7 @@ if minimize
 	minimizedScripts.concat(Dir.glob('js/minimized/*.js'))
 	minimizedScripts.concat(['_minimized_tmp.js']) # Goes last as it may use jQuery and other scripts
     
-	open('_minimized.js', 'w') { |file|
+	open('minimized-output/minimized.js', 'w') { |file|
 		minimizedScripts.each { |otherFilePath|
 			open(otherFilePath) { | otherFile|
                 otherFile.each { |line|
@@ -40,7 +40,7 @@ if minimize
 	cssFiles = Dir.glob('styles/*.css')
     cssFiles.concat(Dir.glob('styles/syntaxhighlighter/*.css'))
 	
-	open('_minimized.css', 'w') { |css|
+	open('minimized-output/minimized.css', 'w') { |css|
 		cssFiles.each { |cssFile|
 			css.puts `java -jar tools/yuicompressor-2.4.7.jar --type css #{cssFile}`
 		}
