@@ -49,9 +49,9 @@ body {
 	border-radius: 4px;
 }
  
-::-webkit-scrollbar-track-piece {
+::-webkit-scrollbar-track-piece, ::-webkit-scrollbar-corner {
     background-color:  #191C1E;
-} 
+}
 
 /* Common styles
 -------------------------------------------------------- */
