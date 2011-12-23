@@ -75,16 +75,14 @@ a:hover {
 	text-decoration: underline;
 }
 
-code, pre {
-	color: white;
-	font-family: Consolas, 'courier new', courier, monospace;
+code, pre, .syntaxhighlighter {
 	border-radius: 5px;
 	border: 1px solid #0B0D0F;
+	font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
 	background: #1E2329;
-	font-weight: bold;
 }
 
-pre {
+pre, .syntaxhighlighter {
 	overflow: auto;
 	width: 100%;
 	height: auto;
@@ -92,9 +90,13 @@ pre {
 	margin: 6px 0;
     font-size: 0.9em;
     line-height: 1em;
+    font-size: 17px;
+    color: #B9BDB6;
 }
 
 code {
+    color: white;
+    font-weight: bold;
 	padding: 0 2px;
 }
 

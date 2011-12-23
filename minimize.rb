@@ -10,25 +10,35 @@ end
 if minimize
 	# SCRIPTS
 	scripts = Dir.glob('js/*.js')
+    scripts.concat(Dir.glob('js/syntaxhighlighter/*.js'))
 	scripts = scripts.map { |s| "--js " + s }
 	
-	cmdLine = 'java -jar tools/closure-compiler.jar --js_output_file _minimized.js ' + scripts.join(' ')
+	cmdLine = 'java -jar tools/closure-compiler.jar --js_output_file _minimized_tmp.js ' + scripts.join(' ')
 	puts cmdLine
 	system(cmdLine)
 	
 	minimizedScripts = ['../default/js/jquery.js', '../default/js/jquery.cookie.js']
 	minimizedScripts.concat(Dir.glob('js/minimized/*.js'))
-	
-	open('_minimized.js', 'a') { |file|
-		minimizedScripts.each { |otherFile|
-			open(otherFile).each { |line|
-				file.puts line
+	minimizedScripts.concat(['_minimized_tmp.js']) # Goes last as it may use jQuery and other scripts
+    
+	open('_minimized.js', 'w') { |file|
+		minimizedScripts.each { |otherFilePath|
+			open(otherFilePath) { | otherFile|
+                otherFile.each { |line|
+                    file.puts line
+                }
 			}
+            file.puts ';'
 		}
 	}
 	
+    if File.exists?('_minimized_tmp.js')
+        FileUtils.rm('_minimized_tmp.js')
+    end
+    
 	# CSS
 	cssFiles = Dir.glob('styles/*.css')
+    cssFiles.concat(Dir.glob('styles/syntaxhighlighter/*.css'))
 	
 	open('_minimized.css', 'w') { |css|
 		cssFiles.each { |cssFile|
