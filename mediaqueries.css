@@ -23,6 +23,11 @@
 }
 
 @media only screen and (max-width:350px) {
+	#main, body {
+		/* Fix a bug in android 2.x by disabling fixed background positions */
+		background-attachment: scroll;
+	}
+
 	#top h1 {
 		position: relative;
 		-webkit-transform: none;
@@ -30,6 +35,9 @@
 		-o-transform: none;
 		-ms-transform: none;
 		transform: none;
+		
+		font-size: 40px;
+		margin: 5px 0 15px 0;
 	}
 	
 	#page
