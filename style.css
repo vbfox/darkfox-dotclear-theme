@@ -35,6 +35,11 @@ body {
 	background-attachment: fixed;
 }
 
+html.android.webkit #main, html.android.webkit body {
+	/* Fix a bug in android 2.x by disabling fixed background positions */
+	background-attachment: scroll;
+}
+
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
