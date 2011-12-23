@@ -61,13 +61,13 @@ ul, ul li {
 }
 
 a:link, a:visited {
-	color: #000;
-	text-decoration: underline;
+	color: #79B3E5;
+	text-decoration: none;
 }
 
 a:hover {
-	color: #000;
-	text-decoration: none;
+	color: #B5CEE2;
+	text-decoration: underline;
 }
 
 code, pre {
