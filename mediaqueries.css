@@ -5,7 +5,7 @@
 	}
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:600px) {
 	#top h1 {
 		font-size: 25px;
 		
@@ -22,7 +22,7 @@
 	}
 }
 
-@media only screen and (max-width:350px) {
+@media only screen and (max-width:540px) {
 	#main, body {
 		/* Fix a bug in android 2.x by disabling fixed background positions */
 		background-attachment: scroll;
