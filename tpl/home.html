@@ -57,15 +57,15 @@
   <tpl:Entries>
 	<div class="post-outer-wrapper {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}}">
 		<div id="p{{tpl:EntryID}}" class="post {{tpl:EntryIfOdd}} {{tpl:EntryIfFirst}}" lang="{{tpl:EntryLang}}" xml:lang="{{tpl:EntryLang}}">
-		<p class="post-datetime">{{tpl:EntryDate}} {{tpl:EntryTime}}</p>
 		<h2 class="post-title">{{tpl:EntryTitle encode_html="1"}}</h2>
 		
-		<tpl:EntryTags>
-		<tpl:TagsHeader><ul class="post-tags"></tpl:TagsHeader>
-		<li><a href="{{tpl:TagURL}}">{{tpl:TagID}}</a></li>
-		<tpl:TagsFooter></ul></tpl:TagsFooter>
-		</tpl:EntryTags>
-		
+        <p class="post-datetime">{{tpl:EntryDate}} {{tpl:EntryTime}}</p>
+        <tpl:EntryTags>
+        <tpl:TagsHeader><ul class="post-tags"></tpl:TagsHeader>
+        <li><a href="{{tpl:TagURL}}">{{tpl:TagID}}</a></li>
+        <tpl:TagsFooter></ul></tpl:TagsFooter>
+        </tpl:EntryTags>
+        
 		<div class="post-inner-wrapper">
 			<!-- # --BEHAVIOR-- publicEntryBeforeContent -->
 			{{tpl:SysBehavior behavior="publicEntryBeforeContent"}}

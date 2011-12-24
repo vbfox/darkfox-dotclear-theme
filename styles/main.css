@@ -307,31 +307,29 @@ a.feed { }
 	margin-top: 0px;
 }
 
-.post-title {
+.post-title, .post-tags {
 	max-width: 900px;
 	margin: 0 auto;
+}
 
+.post-title {
 	padding: 0; /* Don't put anything here, create a 1px line on the right on iPad */
 	color: #FFF;
 	font-size: 2em;
 }
 
 .post-datetime {
+    margin: 0 8px 0 0;
 	color: #8C96A2;
 	padding: 5px 0 0 0;
-	float: right;
+	position: absolute;
+    right: 0;
 	font-style: italic;
-	font-size: 1.2em;
 }
 
 .post-tags {
 	position: relative;
 	overflow: hidden;
-	height: 1%;
-	margin: 8px 0 0 0;
-	padding: 5px;
-	border: 0;
-	background: #FBFBFB;
 }
 
 .post-tags:after {
@@ -343,17 +341,16 @@ a.feed { }
 }
 
 .post-tags li {
-	display: inline;
+	display: block;
+    float: left;
 }
 
 .post-tags li a:link, .post-tags li a:visited {
-	display: block;
-	float: left;
-	padding: 2px 8px 2px 18px;
-	background: transparent url(img/tag.png) no-repeat 0 0;
+	padding: 0 12px 0 0;
 	white-space: nowrap;
-	color: #005D99;
+	color: #8C96A2;
 	text-decoration: none;
+    font-style: italic;
 }
 
 .post-tags li a:hover {

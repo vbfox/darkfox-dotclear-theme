@@ -40,6 +40,6 @@
 	}
 	
 	.post-datetime {
-		float: none;
+		position: relative;
 	}
 }
