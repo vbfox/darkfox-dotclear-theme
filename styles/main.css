@@ -35,6 +35,20 @@ body {
 	background-attachment: fixed;
 }
 
+#back-to-home {
+    position: fixed;
+    left: 5px;
+    top: 5px;
+    background-image: url('../img/home.png');
+    height: 48px;
+    width: 48px;
+    overflow: hidden;
+}
+
+#back-to-home span {
+    margin-left: 100px;
+}
+
 html.android.webkit #main, html.android.webkit body {
 	/* Fix a bug in android 2.x by disabling fixed background positions */
 	background-attachment: scroll;

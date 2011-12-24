@@ -1,9 +1,13 @@
 <div id="top">
-  <h1><span><a href="{{tpl:BlogURL}}">{{tpl:BlogName encode_html="1"}}</a></span></h1>
+  <h1>{{tpl:BlogName encode_html="1"}}</h1>
   
   <!-- # --BEHAVIOR-- publicTopAfterContent -->
   {{tpl:SysBehavior behavior="publicTopAfterContent"}}
 </div>
+
+<tpl:SysIf current_mode="!default">
+<a id="back-to-home" href="{{tpl:BlogURL}}"><span>Home</span></a>
+</tpl:SysIf>
 
 <p id="prelude"><a href="#main">{{tpl:lang To content}}</a> |
 <a href="#blognav">{{tpl:lang To menu}}</a> |
