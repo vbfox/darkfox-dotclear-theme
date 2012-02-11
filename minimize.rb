@@ -21,7 +21,19 @@ if minimize
 	puts cmdLine
 	system(cmdLine)
 	
-	minimizedScripts = Dir.glob('js/minimized/*.js') # jQuery, Modernizr, ... 
+	minimizedScripts = Dir.glob('js/minimized/*.js') # jQuery, Modernizr, ...
+	minimizedScripts.sort! { |x, y|
+		if x =~ /jquery.js$/
+			-1
+		else
+			if y =~ /jquery.js$/
+				1
+			else
+				x <=> y
+			end
+		end
+	}
+	
 	minimizedScripts.concat(['_minimized_tmp.js']) # Goes last as it may use other scripts
     
 	File.open("minimized-output/minimized.js", "w") { |file|
