@@ -21,9 +21,8 @@ if minimize
 	puts cmdLine
 	system(cmdLine)
 	
-	minimizedScripts = ['../default/js/jquery.js', '../default/js/jquery.cookie.js']
-	minimizedScripts.concat(Dir.glob('js/minimized/*.js'))
-	minimizedScripts.concat(['_minimized_tmp.js']) # Goes last as it may use jQuery and other scripts
+	minimizedScripts = Dir.glob('js/minimized/*.js') # jQuery, Modernizr, ... 
+	minimizedScripts.concat(['_minimized_tmp.js']) # Goes last as it may use other scripts
     
 	File.open("minimized-output/minimized.js", "w") { |file|
 		minimizedScripts.each { |otherFilePath|
