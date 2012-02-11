@@ -2,11 +2,13 @@
 
 require 'FileUtils'
 
+generatedHeadFile = 'tpl/_head_x.html'
+
 print 'Minimize (y/n) '
 minimize = /^(y|yes|1)$/.match(readline) ? true : false
 
-if File.exists?('tpl/_head_x.html')
-	FileUtils.rm('tpl/_head_x.html')
+if File.exists?(generatedHeadFile)
+	FileUtils.rm(generatedHeadFile)
 end
 
 if minimize
@@ -23,14 +25,14 @@ if minimize
 	minimizedScripts.concat(Dir.glob('js/minimized/*.js'))
 	minimizedScripts.concat(['_minimized_tmp.js']) # Goes last as it may use jQuery and other scripts
     
-	open('minimized-output/minimized.js', 'w') { |file|
+	File.open("minimized-output/minimized.js", "w") { |file|
 		minimizedScripts.each { |otherFilePath|
 			open(otherFilePath) { | otherFile|
                 otherFile.each { |line|
                     file.puts line
                 }
 			}
-            file.puts ';'
+			file.puts ';'
 		}
 	}
 	
@@ -49,7 +51,7 @@ if minimize
 	}
 	
 	# Fix templates
-	FileUtils.cp('tpl/_head_x_minimized.html', 'tpl/_head_x.html');
+	FileUtils.cp('tpl/_head_x_minimized.html', generatedHeadFile);
 else
-	FileUtils.cp('tpl/_head_x_full.html', 'tpl/_head_x.html');
+	FileUtils.cp('tpl/_head_x_full.html', generatedHeadFile);
 end
